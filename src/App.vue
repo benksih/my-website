@@ -1,4 +1,11 @@
 <script setup>
+fetch('/src/components/bootstrap-icons.min.json')
+  .then(response => response.json())
+  .then(data => {
+    // 在这里使用你的JSON数据
+    console.log(data);
+  })
+  .catch(error => console.error('Error loading the JSON file:', error));
 import { reactive, toRefs } from 'vue'
 
 const state = reactive({
